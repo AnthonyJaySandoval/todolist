@@ -3,10 +3,13 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
+
 main {
     flex: 1 0 auto;
 }
-/*Posts*/
+
+/*Blog Post*/
+
 .blog-post {
     margin-bottom: 60px;
 }
@@ -21,4 +24,3 @@ main {
     color: #999;
     font-style: italic;
 }
-
