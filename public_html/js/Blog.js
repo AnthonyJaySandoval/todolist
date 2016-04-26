@@ -5,6 +5,9 @@ $(function () {
     
     Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
     
+    var user = new Backendless.user();
+    user.email
+    
     var postsCollection = Backendless.Persistence.of(Posts).find();
     
     console.log(postsCollection);
