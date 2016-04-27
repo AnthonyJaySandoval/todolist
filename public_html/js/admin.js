@@ -57,7 +57,6 @@ $(function () {
         Materialize.toast('SUCCESSFULLY POSTED', 2000);
         }
         
-        
         dataStore.save(postObject);
         
         this.title.value = "";
