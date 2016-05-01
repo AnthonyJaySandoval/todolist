@@ -2,25 +2,40 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    background-color: #CE93D8;
 }
 
 main {
     flex: 1 0 auto;
+    
 }
 
-/*Blog Post*/
+/*blog posts*/
 
 .blog-post {
-    margin-bottom: 60px;
 }
 
 .blog-post-title {
-    margin-bottom: 5px;
     font-size: 40px;
 }
 
 .blog-post-meta {
-    margin-bottom: 20px;
     color: #999;
     font-style: italic;
+    
 }
+
+h3 {
+    font-size: 20px
+}
+
+h5 {
+    font-size: 50px
+}
+
+h6 {
+    font-size: 25px
+}
+
+
