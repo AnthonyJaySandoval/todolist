@@ -3,7 +3,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    background-color: #CE93D8;
+    background-color: yellow;
 }
 
 main {
@@ -22,7 +22,7 @@ main {
 }
 
 .blog-post-meta {
-    color: #fff;
+    color:#888;
     font-style: italic;
     
 }
