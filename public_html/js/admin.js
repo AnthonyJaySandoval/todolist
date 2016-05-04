@@ -4,8 +4,7 @@ $(function () {
         VERSION = "v1";
  
        Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
-
-   if (Backendless.UserService.isValidLogin()) {
+   if (Backendless.UserService.isValidLogin()){
        userLoggedIn(Backendless.LocalCache.get("current-user-id"));
    } else {
        var loginScript = $("#login-template").html();
@@ -39,7 +38,7 @@ $(function () {
                content = data[1].value;
 
        if (content === "" || title === "") {
-           Materialize.toast('Empty title or statement!', 4000);
+           Materialize.toast('Empty title or statement', 4000);
        }
        else {
            var dataStore = Backendless.Persistence.of(Posts);
@@ -87,7 +86,7 @@ function userLoggedIn(user) {
        userData = user;
    }
    var welcomeScript = $('#welcome-template').html();
-  var welcomeTemplate = Handlebars.compile(welcomeScript);
+   var welcomeTemplate = Handlebars.compile(welcomeScript);
    var welcomeHTML = welcomeTemplate(userData);
 
    $('.main-container').html(welcomeHTML);
@@ -100,7 +99,7 @@ function userLoggedOut(){
 }
 
 function gotError(error){
-   Materialize.toast('Wrong Username or Password!', 4000) // 4000 is the duration of the toast
+   Materialize.toast('Wrong Username or Password', 4000) // 4000 is the duration of the toast
    console.log("Error message - " + error.message);
    console.log("Error code - " + error.code);
 }
