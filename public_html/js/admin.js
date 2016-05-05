@@ -34,10 +34,9 @@ $(function () {
        event.preventDefault();
       
        var data = $(this).serializeArray(),
-               title = data[0].value,
-               content = data[1].value;
+               title = data[0].value
 
-       if (content === "" || title === "") {
+       if (title === "") {
            Materialize.toast('Empty title or statement', 4000);
        }
        else {
@@ -45,7 +44,6 @@ $(function () {
 
            var postObject = new Posts({
                title: title,
-               content: content,
                authorEmail: Backendless.UserService.getCurrentUser().email
 
            });
@@ -53,7 +51,6 @@ $(function () {
            dataStore.save(postObject);
 
            this.title.value = "";
-           this.content.value = "";
        }
    });
 
@@ -73,7 +70,6 @@ $(document).on('click', '.logout', function () {
 function Posts(args) {
    args = args || {};
    this.title = args.title || "";
-   this.content = args.content || "";
    this.authorEmail = args.authorEmail || "";
 }
 
